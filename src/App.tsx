@@ -23,7 +23,7 @@ const stagger = {
 
 const fadeUp = {
   hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] as const } },
 };
 
 function DashboardContent() {
@@ -79,7 +79,7 @@ const pageTransition = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -6 },
-  transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
+  transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] as const },
 };
 
 function App() {

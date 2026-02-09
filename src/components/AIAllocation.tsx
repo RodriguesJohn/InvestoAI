@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const allocationData = [
   { label: "Grow Wealth", value: 40, color: "#1A3FBF", badge: "Growth", badgeColor: "#22C55E", amount: "$40/mo" },
