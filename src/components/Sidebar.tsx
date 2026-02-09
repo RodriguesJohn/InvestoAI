@@ -18,13 +18,16 @@ export function Sidebar({ activePage, onNavigate, viewMode, onViewModeChange }: 
         boxShadow: "4px 2px 23px 5px var(--shadow-color)",
       }}
     >
-      {/* Logo */}
-      <div className="flex items-center gap-3 px-6 pt-6 pb-8">
+      {/* Logo — click to go to Dashboard */}
+      <button
+        className="flex items-center gap-3 px-6 pt-6 pb-8 cursor-pointer"
+        onClick={() => onNavigate("Dashboard")}
+      >
         <img src={IconImg} alt="Investo AI" className="w-[40px] h-[40px] object-contain" />
         <span className="text-lg font-semibold text-[var(--text-primary)]">
           Investo AI
         </span>
-      </div>
+      </button>
 
       {/* Navigation */}
       <nav className="flex flex-col gap-1 px-6">
