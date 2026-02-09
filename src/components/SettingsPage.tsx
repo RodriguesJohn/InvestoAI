@@ -74,23 +74,23 @@ export function SettingsPage() {
 
   return (
     <motion.div
-      className="flex-1 p-6 overflow-auto min-h-0"
+      className="flex-1 p-4 md:p-6 overflow-auto min-h-0"
       variants={stagger}
       initial="hidden"
       animate="show"
     >
       {/* Header */}
-      <motion.div variants={fadeUp} className="mb-6">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+      <motion.div variants={fadeUp} className="mb-4 md:mb-6">
+        <h1 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
           Settings
         </h1>
-        <p className="text-sm text-[var(--text-secondary)] mt-1">
+        <p className="text-xs md:text-sm text-[var(--text-secondary)] mt-1">
           Manage your account preferences and security
         </p>
       </motion.div>
 
       {/* Top Row: Profile + Security */}
-      <div className="grid grid-cols-2 gap-5 mb-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 mb-4 md:mb-5">
         {/* Profile */}
         <motion.div
           variants={fadeUp}
@@ -151,7 +151,7 @@ export function SettingsPage() {
       </div>
 
       {/* Bottom Row: Notifications + Connected Accounts */}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
         {/* Notifications */}
         <motion.div
           variants={fadeUp}

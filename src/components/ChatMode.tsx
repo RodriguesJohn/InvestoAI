@@ -166,7 +166,7 @@ export function ChatMode({ activePage = "Dashboard" }: ChatModeProps) {
 
   return (
     <motion.div
-      className="flex-1 flex flex-col min-h-0 p-6"
+      className="flex-1 flex flex-col min-h-0 p-4 md:p-6"
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
@@ -176,7 +176,7 @@ export function ChatMode({ activePage = "Dashboard" }: ChatModeProps) {
         style={{ boxShadow: "0 1px 4px var(--shadow-color)" }}
       >
         {/* Header */}
-        <div className="flex items-center gap-3 px-8 py-5 shrink-0 border-b border-[var(--border-color)]">
+        <div className="flex items-center gap-3 px-4 md:px-8 py-4 md:py-5 shrink-0 border-b border-[var(--border-color)]">
           <AiAvatar size="md" />
           <div>
             <h2 className="text-lg font-bold text-[var(--text-primary)]">
@@ -192,7 +192,7 @@ export function ChatMode({ activePage = "Dashboard" }: ChatModeProps) {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-auto px-8 py-6 flex flex-col gap-5 min-h-0">
+        <div className="flex-1 overflow-auto px-4 md:px-8 py-4 md:py-6 flex flex-col gap-4 md:gap-5 min-h-0">
           {messages.map((msg) => {
             if (msg.sender === "ai") {
               return (
@@ -220,7 +220,7 @@ export function ChatMode({ activePage = "Dashboard" }: ChatModeProps) {
         </div>
 
         {/* Suggested Questions */}
-        <div className="shrink-0 border-t border-[var(--border-color)] px-8 py-3">
+        <div className="shrink-0 border-t border-[var(--border-color)] px-4 md:px-8 py-3">
           <p className="text-xs text-[var(--text-secondary)] mb-2.5 text-center">
             Suggested questions
           </p>
@@ -238,7 +238,7 @@ export function ChatMode({ activePage = "Dashboard" }: ChatModeProps) {
         </div>
 
         {/* Input */}
-        <div className="px-8 py-5 shrink-0">
+        <div className="px-4 md:px-8 py-4 md:py-5 shrink-0">
           <div
             className="flex items-center gap-3 rounded-full px-6 py-4"
             style={{

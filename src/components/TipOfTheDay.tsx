@@ -35,7 +35,7 @@ export function TipOfTheDay() {
           Tip of the day
         </span>
       </div>
-      <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row gap-3 md:gap-4">
         {tips.map((tip, i) => (
           <motion.div
             key={i}

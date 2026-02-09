@@ -127,7 +127,7 @@ function SuccessScreen({
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="w-[440px] bg-[var(--bg-card)] rounded-2xl p-8 relative overflow-hidden"
+      className="w-[calc(100vw-32px)] sm:w-[440px] bg-[var(--bg-card)] rounded-2xl p-6 sm:p-8 relative overflow-hidden"
       style={{
         boxShadow: "0 20px 60px var(--shadow-color), 0 4px 16px var(--shadow-color)",
       }}
@@ -280,7 +280,7 @@ export function AddFundsButton() {
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95, y: -10 }}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                  className="w-[440px] bg-[var(--bg-card)] rounded-2xl p-8 relative"
+                  className="w-[calc(100vw-32px)] sm:w-[440px] bg-[var(--bg-card)] rounded-2xl p-6 sm:p-8 relative"
                   style={{
                     boxShadow: "0 20px 60px var(--shadow-color), 0 4px 16px var(--shadow-color)",
                   }}

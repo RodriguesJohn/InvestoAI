@@ -174,17 +174,17 @@ function AgentCard({ agent }: { agent: Agent }) {
 export function AgentsPage() {
   return (
     <motion.div
-      className="flex-1 p-6 overflow-auto min-h-0"
+      className="flex-1 p-4 md:p-6 overflow-auto min-h-0"
       variants={stagger}
       initial="hidden"
       animate="show"
     >
       {/* Header */}
-      <motion.div variants={fadeUp} className="mb-6">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+      <motion.div variants={fadeUp} className="mb-4 md:mb-6">
+        <h1 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
           Investo Agents
         </h1>
-        <p className="text-sm text-[var(--text-secondary)] mt-1">
+        <p className="text-xs md:text-sm text-[var(--text-secondary)] mt-1">
           Deploy AI agents to automate and optimize your financial strategy
         </p>
       </motion.div>
@@ -192,18 +192,18 @@ export function AgentsPage() {
       {/* Summary Stats Bar */}
       <motion.div
         variants={fadeUp}
-        className="flex items-center mb-8 px-8 py-5 rounded-2xl border border-[var(--border-color)]"
+        className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-0 mb-6 md:mb-8 px-4 md:px-8 py-4 md:py-5 rounded-2xl border border-[var(--border-color)]"
       >
         {summaryStats.map((stat, i) => (
           <div key={stat.label} className="flex items-center flex-1">
             {i > 0 && (
-              <div className="w-px h-8 bg-[var(--border-color)] mr-8" />
+              <div className="hidden sm:block w-px h-8 bg-[var(--border-color)] mr-4 md:mr-8" />
             )}
-            <div className="flex items-baseline gap-2.5">
-              <span className="text-2xl font-bold text-[var(--text-primary)]">
+            <div className="flex items-baseline gap-2 md:gap-2.5">
+              <span className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
                 {stat.value}
               </span>
-              <span className="text-sm text-[var(--text-secondary)]">
+              <span className="text-xs md:text-sm text-[var(--text-secondary)]">
                 {stat.label}
               </span>
             </div>
@@ -214,13 +214,13 @@ export function AgentsPage() {
       {/* Section Title */}
       <motion.h2
         variants={fadeUp}
-        className="text-base font-bold text-[var(--text-primary)] mb-4"
+        className="text-sm md:text-base font-bold text-[var(--text-primary)] mb-3 md:mb-4"
       >
         Available Agents
       </motion.h2>
 
-      {/* Agent Cards — 3×2 grid */}
-      <div className="grid grid-cols-3 gap-5">
+      {/* Agent Cards — responsive grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
         {agents.map((agent) => (
           <AgentCard key={agent.name} agent={agent} />
         ))}

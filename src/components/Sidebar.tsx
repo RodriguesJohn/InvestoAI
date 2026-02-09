@@ -13,7 +13,7 @@ interface SidebarProps {
 export function Sidebar({ activePage, onNavigate, viewMode, onViewModeChange }: SidebarProps) {
   return (
     <aside
-      className="w-[278px] h-full bg-[var(--bg-card)] rounded-xl flex flex-col shrink-0"
+      className="w-[278px] h-full bg-[var(--bg-card)] rounded-none md:rounded-xl flex flex-col shrink-0"
       style={{
         boxShadow: "4px 2px 23px 5px var(--shadow-color)",
       }}

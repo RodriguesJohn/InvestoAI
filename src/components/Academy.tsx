@@ -77,7 +77,7 @@ function FeaturedImage() {
 
 export function Academy() {
   return (
-    <div className="flex-1 p-6 min-h-0 flex flex-col">
+    <div className="flex-1 p-4 md:p-6 min-h-0 flex flex-col overflow-auto">
       {/* Header */}
       <div className="mb-4 shrink-0">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">
@@ -89,13 +89,13 @@ export function Academy() {
       </div>
 
       {/* Featured Video + Course Contents */}
-      <div className="flex gap-6 mb-4" style={{ flex: "1 1 0", minHeight: 0, maxHeight: "55vh" }}>
+      <div className="flex flex-col md:flex-row gap-4 md:gap-6 mb-4" style={{ flex: "1 1 0", minHeight: 0, maxHeight: "55vh" }}>
         {/* Featured Image */}
         <FeaturedImage />
 
         {/* Course Contents */}
         <div
-          className="w-[300px] shrink-0 bg-white rounded-2xl p-5 overflow-auto"
+          className="w-full md:w-[300px] shrink-0 bg-white rounded-2xl p-5 overflow-auto"
           style={{ boxShadow: "4px 2px 23px 5px rgba(242, 242, 242, 0.25)" }}
         >
           <h3 className="text-base font-bold text-[var(--text-primary)] mb-4">
@@ -131,11 +131,11 @@ export function Academy() {
         <h2 className="text-lg font-bold text-[var(--text-primary)] mb-3">
           Continue Learning - Deep Dive Resources
         </h2>
-        <div className="flex gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {deepDiveResources.map((resource) => (
             <motion.div
               key={resource.title}
-              className="flex-1 min-w-0 cursor-pointer group bg-white rounded-2xl overflow-hidden"
+              className="min-w-0 cursor-pointer group bg-white rounded-2xl overflow-hidden"
               style={{ boxShadow: "4px 2px 23px 5px rgba(242, 242, 242, 0.25)" }}
               whileHover={{
                 y: -6,

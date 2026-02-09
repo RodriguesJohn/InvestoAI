@@ -188,46 +188,47 @@ function RecommendationCard({
 export function GoalsPage() {
   return (
     <motion.div
-      className="flex-1 p-6 overflow-auto min-h-0"
+      className="flex-1 p-4 md:p-6 overflow-auto min-h-0"
       variants={stagger}
       initial="hidden"
       animate="show"
     >
       {/* Header */}
-      <motion.div variants={fadeUp} className="flex items-center justify-between mb-6">
+      <motion.div variants={fadeUp} className="flex items-center justify-between mb-4 md:mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Goals</h1>
-          <p className="text-sm text-[var(--text-secondary)] mt-1">
+          <h1 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">Goals</h1>
+          <p className="text-xs md:text-sm text-[var(--text-secondary)] mt-1">
             Track progress and adjust your financial targets
           </p>
         </div>
         <motion.button
-          className="flex items-center gap-2 px-5 py-3 rounded-full text-white text-sm font-semibold"
+          className="flex items-center gap-1.5 md:gap-2 px-4 md:px-5 py-2.5 md:py-3 rounded-full text-white text-xs md:text-sm font-semibold"
           style={{ backgroundColor: "var(--accent-blue)" }}
           whileHover={{ opacity: 0.9 }}
           whileTap={{ scale: 0.97 }}
         >
-          <Plus size={16} strokeWidth={2.5} />
-          Create Goal
+          <Plus size={14} strokeWidth={2.5} className="md:w-4 md:h-4" />
+          <span className="hidden sm:inline">Create Goal</span>
+          <span className="sm:hidden">New</span>
         </motion.button>
       </motion.div>
 
       {/* Summary Stats */}
-      <motion.div variants={fadeUp} className="flex gap-20 mb-10">
+      <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4 md:flex md:gap-20 mb-6 md:mb-10">
         {summaryStats.map((stat) => (
           <div key={stat.label}>
-            <span className="text-xl font-bold text-[var(--text-primary)]">
+            <span className="text-lg md:text-xl font-bold text-[var(--text-primary)]">
               {stat.value}
             </span>
-            <p className="text-sm text-[var(--text-secondary)] mt-1.5">
+            <p className="text-xs md:text-sm text-[var(--text-secondary)] mt-1 md:mt-1.5">
               {stat.label}
             </p>
           </div>
         ))}
       </motion.div>
 
-      {/* Goal Cards — 2×2 grid */}
-      <div className="grid grid-cols-2 gap-5 mb-6">
+      {/* Goal Cards — 2×2 on desktop, single column on mobile */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 mb-4 md:mb-6">
         {goals.map((goal) => (
           <GoalCard key={goal.name} goal={goal} />
         ))}
@@ -235,10 +236,10 @@ export function GoalsPage() {
 
       {/* AI Recommendations */}
       <motion.div variants={fadeUp}>
-        <h2 className="text-lg font-bold text-[var(--text-primary)] mb-3">
+        <h2 className="text-base md:text-lg font-bold text-[var(--text-primary)] mb-3">
           AI Recommendations
         </h2>
-        <div className="flex gap-5">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-5">
           {recommendations.map((rec) => (
             <RecommendationCard key={rec.title} rec={rec} />
           ))}
