@@ -6,7 +6,7 @@ const goals = [
   { id: "save", label: "Save", emoji: "🏠" },
   { id: "retirement", label: "Retirement", emoji: "🎯" },
   { id: "education", label: "Education", emoji: "🎓" },
-  { id: "emergency", label: "Emergency fund", emoji: "🛡️" },
+  { id: "emergency", label: "Emergency Fund", emoji: "🛡️" },
   { id: "travel", label: "Travel", emoji: "✈️" },
 ];
 
@@ -80,9 +80,9 @@ export function ShareGoals({ onContinue }: ShareGoalsProps) {
       >
         <span className="text-lg shrink-0">💡</span>
         <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-          This is called your risk tolerance, how comfortable you are with your
-          money going up and down. There's no wrong answer, it just helps us
-          match you with the right mix.
+          Pick as many as you like. Your goals help us figure out the best way
+          to invest your money — whether that's growing it over time, saving for
+          something specific, or building a safety net.
         </p>
       </div>
     </div>

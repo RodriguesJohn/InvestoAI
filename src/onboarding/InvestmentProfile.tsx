@@ -228,9 +228,9 @@ export function InvestmentProfile({ onContinue }: InvestmentProfileProps) {
           >
             <span className="text-lg shrink-0">💡</span>
             <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-              This is called your risk tolerance, how comfortable you are with your
-              money going up and down. There's no wrong answer, it just helps us
-              match you with the right mix.
+              This is called your risk tolerance — how comfortable you are with
+              your money going up and down. There's no wrong answer; it just
+              helps us match you with the right mix.
             </p>
           </div>
         </motion.div>
@@ -365,9 +365,9 @@ export function InvestmentProfile({ onContinue }: InvestmentProfileProps) {
           >
             <span className="text-lg shrink-0">💡</span>
             <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-              There's no minimum to start. Many investors begin small and add money
-              regularly, that's called dollar-cost averaging. It's one of the simplest
-              ways to build wealth over time.
+              There's no minimum to start. Many investors begin small and add
+              money regularly — that's called dollar-cost averaging. It's one of
+              the simplest ways to build wealth over time.
             </p>
           </div>
         </motion.div>

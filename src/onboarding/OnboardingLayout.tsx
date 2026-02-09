@@ -5,8 +5,8 @@ import IconImg from "../assets/Icon.png";
 const steps = [
   { label: "Create account", detail: "Enter your email and password" },
   { label: "Share goals", detail: "Tell us about your financial goals" },
-  { label: "Setup investment profile", detail: "Setup your investment profile" },
-  { label: "Start your financial journey", detail: "Start your financial journey" },
+  { label: "Set up investment profile", detail: "Define your risk tolerance and timeline" },
+  { label: "Start your financial journey", detail: "Get your AI-powered investment plan" },
 ];
 
 const contentTransition = {
@@ -39,7 +39,7 @@ export function OnboardingLayout({ currentStep, children }: OnboardingLayoutProp
 
           {/* Heading */}
           <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-2">
-            Get started Today
+            Get Started Today
           </h2>
           <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-10">
             Complete these steps to set up your personalized investment experience.
