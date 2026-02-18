@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Sidebar } from "./components/Sidebar";
@@ -16,6 +16,7 @@ import { GoalsPage } from "./components/GoalsPage";
 import { AgentsPage } from "./components/AgentsPage";
 import { SettingsPage } from "./components/SettingsPage";
 import { Onboarding } from "./onboarding/Onboarding";
+import { LockScreen } from "./components/LockScreen";
 import IconImg from "./assets/Icon.png";
 
 const stagger = {
@@ -188,6 +189,22 @@ function App() {
   const [viewMode, setViewMode] = useState<"view" | "chat">("view");
   const [onboarded, setOnboarded] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [unlocked, setUnlocked] = useState(() => {
+    // Check if already unlocked in this session
+    return sessionStorage.getItem("investo_unlocked") === "true";
+  });
+
+  useEffect(() => {
+    // Persist unlock state to session storage
+    if (unlocked) {
+      sessionStorage.setItem("investo_unlocked", "true");
+    }
+  }, [unlocked]);
+
+  // Show lock screen first
+  if (!unlocked) {
+    return <LockScreen onUnlock={() => setUnlocked(true)} />;
+  }
 
   if (!onboarded) {
     return <Onboarding onComplete={() => setOnboarded(true)} />;
